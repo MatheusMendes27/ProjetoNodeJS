@@ -1,0 +1,43 @@
+<!-- #each serve para mostrar cada elemento 1 por 1-->
+
+<div class="centraliza-post">
+<div class="posts">
+{{#each posts}}
+
+<div class="alinha-post">
+
+código da postagem: {{id}}
+<h1>{{titulo}}</h1>
+<p>{{conteudo}}</p>
+<a href="/deletar{{id}}" class="deletar"><button>Deletar</button></a>   
+
+</div>
+<br>
+<hr>
+{{/each}}
+
+</div>
+
+<div>
+    <a href="/">
+    <button class="btn-voltar">Voltar</button>
+    </a>
+</div>
+
+
+<script>
+    
+    var a = document.querySelector('.deletar')
+
+     a.addEventListener('click',()=>{
+    var result = confirm('Deseja realmente apagar?')
+    if(result==false)
+    {
+     a.href = ""
+    }
+    else{
+        
+    }
+   })
+</script>
+

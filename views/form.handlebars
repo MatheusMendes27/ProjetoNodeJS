@@ -1,0 +1,49 @@
+ <header>
+     <h1>
+         Tela de post
+     </h1>
+ </header>
+
+ <div class="branco">
+
+ <form action="/cadastrado" method="POST" class="formulario">
+    <div class="block">
+     <div>Titulo
+     <p>
+         <input name="titulo" type="text" id="title">
+     </p>
+     <br>
+     </div>
+
+     <div>
+     Conteúdo
+     <p>
+         <textarea name="conteudo" id="cont"></textarea>
+     </p>
+     </div>
+
+     <br>
+     <button type="submit" class="but">Cadastrar</button>
+     </div>
+ </form>
+
+<a href="/posts">
+ <button type="submit" class="but-post">Ver postagens</button>
+ </a>
+ 
+
+</div>
+ <script>
+     
+     var but = document.querySelector('.but')
+
+
+     but.addEventListener('click', () => {
+         if (document.getElementById('title').value == "" || document.getElementById('cont').value == "") {
+             alert('faltam informações')
+             document.querySelector('.formulario').action="/"
+         } else {
+             
+         }
+     })
+ </script>
